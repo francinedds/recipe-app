@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1e1e1e;
+}
+
+.container{
+    position: absolute;
+    width: 90vw;
+    max-width: 32em;
+    padding: 3em 2.8em;
+    background-color: #fff;
+    border-radius: 0.6em;
+}
+
+.search-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.2em;
+}
+
+.search-container input{
+    width: 350px;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.search-container button{
+    font-size: 1em;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-container button:hover{
+    opacity: 0.2;
+}
+
+img{
+    display: block;
+    width: 50%;
+    margin: 1.6em auto 20px auto;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+img:hover{
+    filter: none;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+#recipe{
+    position: absolute;
+    background-color: #fff;
+    font-weight: 500;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 0.6em;
+    display: none; /*esconde a receita e volta ao painel inicial*/
+}
+
+#recipe pre{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 2.5em 1.2em 1.2em 1.2em;
+}
+
+/*.details{
+//parte opcional do design
+}*/
+
+.details h2{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.details h4{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#hide-recipe{
+    font-size: 1em;
+    position: relative;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    top: 1.2em;
+    left: 90%;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#hide-recipe:hover{
+    opacity: 0.2;
+}
+
+#show-recipe{
+    font-size: 1em;
+    font-weight: 600;
+    position: relative;
+    left: 75%;
+    padding: 0.9em 0.6em;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    top: 1.5em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#show-recipe:hover{
+    opacity: 0.2;
+}
+
+ul{
+    font-size: 1em;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.8em 1.1em;
+    padding: 1.2em 0 0 1.2em;
+    font-weight: 500;
+}
+
+h3{
+    text-align: center;
+    margin-top: 1.6em;
+    color: red;
+}
+
+/* parte responsiva */
+@media  screen and (max-width: 500px) {
+    .container{
+        font-size: 14px;
+    }
+    
+}
